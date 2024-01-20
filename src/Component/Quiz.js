@@ -33,7 +33,7 @@ const Quiz = () => {
             <div className="option-container">
                 {QuizData[currentQuestion].options.map((option,i)=>{
                     return(
-                        <button className="option-btn"
+                        <button className={`option-btn ${clickedoption=== i+1?"checked":null}` }
                         key={i}
                         onClick={()=> setClickedoption(i+1)}>
                             {option}
